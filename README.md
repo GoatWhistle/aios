@@ -13,7 +13,7 @@
 <p align="center">
   <!-- readme:buttons -->
   <a href="#запуск"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/cta-run.dark.png"><img src="docs/readme/cta-run.light.png" alt="Запустить локально" width="224" height="44"></picture></a>
-  <a href="docs/for-judges.md"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/cta-route.dark.png"><img src="docs/readme/cta-route.light.png" alt="Маршрут проверки" width="218" height="44"></picture></a>
+  <a href="docs/product.md"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/cta-product.dark.png"><img src="docs/readme/cta-product.light.png" alt="О продукте" width="153" height="44"></picture></a>
   <a href="docs/README.md"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/cta-docs.dark.png"><img src="docs/readme/cta-docs.light.png" alt="Документация" width="182" height="44"></picture></a>
   <!-- /readme:buttons -->
 </p>
@@ -134,9 +134,6 @@ flowchart LR
 | 3 | `/field/maps` | Карты дека Model_Z по двум пластам, k 1–26 и k 29–53 |
 | 4 | `/money/comparison` | Происхождение каждого числа построчно, чемпион отмечен |
 | 5 | Сфера Джарвиса | Вопрос словами, ответ сценой из карточек с происхождением каждого числа |
-
-Что доказывает каждый шаг и где отвечен каждый критерий оценки — в
-[маршруте проверки](docs/for-judges.md).
 
 <p align="center">
   <img src="docs/images/projection.png" alt="Граф связности: 103 скважины, измеренные рёбра λ между нагнетательными и добывающими" width="880">
