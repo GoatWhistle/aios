@@ -35,8 +35,6 @@ frontend/.screens/
 .env.local
 .DS_Store
 .claude/
-.impeccable/
-**/.impeccable/
 .mcp.json
 *.tmp
 .idea/
@@ -54,4 +52,3 @@ AGENTS.md
 .aider*
 
 .shots/
-.playwright-mcp/
