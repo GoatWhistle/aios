@@ -241,6 +241,8 @@ tools/       разовые замеры: компенсация, λ, калиб
 
 Каждая граница целиком — в [limitations.md](docs/limitations.md).
 
-## Лицензия
-
-[MIT](LICENSE)
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme/mark.dark.png"><img src="docs/readme/mark.light.png" alt="" width="32" height="32"></picture>
+  <br>
+  <sub>Команда Ullax, хакатон AIOS, трек 2 «Управление фондом скважин Model_Z», 2026. Лицензия <a href="LICENSE">MIT</a>.</sub>
+</p>
