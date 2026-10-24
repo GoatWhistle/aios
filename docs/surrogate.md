@@ -123,7 +123,7 @@ blended = (1 − w) · direct + w · physical
 (`ood_calibration.py:14`): любой выход за границу отклоняет кандидата.
 
 Порог именно такой не потому, что он настроен, а потому, что настроить его было не на чем:
-[`out/ood-calibration.json`](../out/ood-calibration.json) содержит `point_count: 2` и
+`out/ood-calibration.json` (вывод [`tools/ood_calibration.py`](../tools/ood_calibration.py), в git не хранится) содержит `point_count: 2` и
 `curve_is_reliable: false`. Называть этот гейт «откалиброванным» нельзя.
 
 **Сценарный плотностный.** `ScenarioDensityDomain` (`scenario_ood.py:26`) стандартизует

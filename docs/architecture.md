@@ -18,6 +18,7 @@
 
 Три слоя: точки входа, тринадцать ограниченных контекстов, общее ядро.
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#ffffff","primaryTextColor":"#1a2028","primaryBorderColor":"#3d22c3","secondaryColor":"#e9edf2","tertiaryColor":"#f5f7fa","lineColor":"#8b8f96","textColor":"#1a2028","noteBkgColor":"#e9edf2","noteTextColor":"#4f5560","actorBkg":"#ffffff","actorBorder":"#3d22c3","fontFamily":"Inter"}}}%%
 graph TD
     CLI["interfaces/cli<br/>aios · 17 команд"]
     HTTP["interfaces/http<br/>консоль · ассистент · дашборд"]
@@ -151,6 +152,7 @@ contexts/<name>/
 Главный поток `aios run full`. Суть решения в том, что поиск идёт по суррогату,
 а подтверждение — по настоящему гидродинамическому симулятору.
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#ffffff","primaryTextColor":"#1a2028","primaryBorderColor":"#3d22c3","secondaryColor":"#e9edf2","tertiaryColor":"#f5f7fa","lineColor":"#8b8f96","textColor":"#1a2028","noteBkgColor":"#e9edf2","noteTextColor":"#4f5560","actorBkg":"#ffffff","actorBorder":"#3d22c3","fontFamily":"Inter"}}}%%
 flowchart TD
     START(["aios run full --case"]) --> CASE["constraints<br/>загрузка кейса"]
     CASE --> SEARCH
@@ -197,6 +199,7 @@ flowchart TD
 
 Кандидат проходит их по очереди; каждый умеет отклонить.
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#ffffff","primaryTextColor":"#1a2028","primaryBorderColor":"#3d22c3","secondaryColor":"#e9edf2","tertiaryColor":"#f5f7fa","lineColor":"#8b8f96","textColor":"#1a2028","noteBkgColor":"#e9edf2","noteTextColor":"#4f5560","actorBkg":"#ffffff","actorBorder":"#3d22c3","fontFamily":"Inter"}}}%%
 flowchart LR
     C["кандидат"] --> G1["ood_threshold<br/>в области обучения?"]
     G1 -->|да| G2["bhp_tolerance<br/>забойное давление<br/>в допуске?"]
@@ -220,6 +223,7 @@ flowchart LR
 
 Решение принимается не одним агентом, а по уровням — от месторождения к скважине.
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#ffffff","primaryTextColor":"#1a2028","primaryBorderColor":"#3d22c3","secondaryColor":"#e9edf2","tertiaryColor":"#f5f7fa","lineColor":"#8b8f96","textColor":"#1a2028","noteBkgColor":"#e9edf2","noteTextColor":"#4f5560","actorBkg":"#ffffff","actorBorder":"#3d22c3","fontFamily":"Inter"}}}%%
 graph TD
     FIELD["field<br/>уровень месторождения:<br/>баланс закачки и отбора"]
     GROUP["group<br/>уровень группы:<br/>распределение по участкам"]
@@ -341,6 +345,7 @@ frontend/src/
 Отдельный контекст, который отвечает на вопросы по системе и показывает, что происходило
 в прогоне.
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#ffffff","primaryTextColor":"#1a2028","primaryBorderColor":"#3d22c3","secondaryColor":"#e9edf2","tertiaryColor":"#f5f7fa","lineColor":"#8b8f96","textColor":"#1a2028","noteBkgColor":"#e9edf2","noteTextColor":"#4f5560","actorBkg":"#ffffff","actorBorder":"#3d22c3","fontFamily":"Inter"}}}%%
 flowchart TD
     Q(["вопрос инженера"]) --> ORCH["assistant/application<br/>оркестратор"]
 
@@ -387,8 +392,9 @@ compose на порту 8010, на `ThreadingHTTPServer`, с chunked `text/event
 
 Устройство, инструменты и границы ассистента — в [jarvis.md](jarvis.md).
 
-## Развёртывание
+## Docker-образ
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#ffffff","primaryTextColor":"#1a2028","primaryBorderColor":"#3d22c3","secondaryColor":"#e9edf2","tertiaryColor":"#f5f7fa","lineColor":"#8b8f96","textColor":"#1a2028","noteBkgColor":"#e9edf2","noteTextColor":"#4f5560","actorBkg":"#ffffff","actorBorder":"#3d22c3","fontFamily":"Inter"}}}%%
 flowchart LR
     subgraph Image["Docker-образ aios:latest"]
         direction TB
@@ -408,8 +414,8 @@ flowchart LR
     style Image fill:#eef2f6,stroke:#9fb3c8
 ```
 Данные организаторов в образ не входят — монтируются томом. Поэтому образ собирается и
-запускается на чистой машине, а расчёт требует смонтированных данных. Порядок запуска и
-перенос на сервер — в [running.md](running.md).
+запускается на чистой машине, а расчёт требует смонтированных данных. Порядок запуска — в
+[running.md](running.md).
 
 ## Прогон
 
